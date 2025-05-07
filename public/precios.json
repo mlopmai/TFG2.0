@@ -1,0 +1,40 @@
+{
+    "gimnasio": "Málaga Fit",
+    "planes": [
+      {
+        "nombre": "Básico",
+        "precio_mensual": 25,
+        "incluye": [
+          "Acceso ilimitado al gimnasio",
+          "Clases grupales estándar"
+        ]
+      },
+      {
+        "nombre": "Estándar",
+        "precio_mensual": 40,
+        "incluye": [
+          "Acceso ilimitado al gimnasio",
+          "Clases grupales estándar",
+          "Acceso a piscina",
+          "Sesión mensual de evaluación física"
+        ]
+      },
+      {
+        "nombre": "Premium",
+        "precio_mensual": 70,
+        "incluye": [
+          "Acceso ilimitado al gimnasio",
+          "Clases premium",
+          "Acceso a piscina y sauna",
+          "Evaluación física quincenal",
+          "Plan nutricional personalizado",
+          "Entrenador personal 2 veces por semana"
+        ],
+        "beneficios_adicionales": {
+          "nutricionista": true,
+          "entrenador_personal": true
+        }
+      }
+    ]
+  }
+  
