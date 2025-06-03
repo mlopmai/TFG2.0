@@ -78,6 +78,9 @@ class OficinaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $oficina = Oficina::findOrFail($id);
+        $oficina->delete();
+
+        return redirect()->route('oficinas.index')->with('success', 'Oficina eliminada correctamente.');
     }
 }

@@ -40,6 +40,14 @@
         <input type="text" name="direccion" value="{{old('direccion', $oficinas->direccion)}}" placeholder="direccion">
         <input type="submit" value="Enviar">
     </form>
+
+    <form action="{{ route('oficinas.destroy', $oficinas->id) }}" method="POST" style="display:inline;">
+        @csrf
+        @method('DELETE')
+        <button type="submit" onclick="return confirm('¿Estás seguro de que quieres eliminar este gimnasio?');" style="background-color: red; color: white; border: none; padding: 8px 12px; cursor: pointer;">
+            Eliminar Gimnasio
+        </button>
+    </form>
     </main>
 
 <footer>

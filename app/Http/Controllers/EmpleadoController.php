@@ -96,8 +96,11 @@ class EmpleadoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $oficinaId, string $empleadoId)
     {
-        //
+        $empleado = Empleado::findOrFail($empleadoId);
+        $empleado->delete();
+
+        return redirect()->route('oficinas.index')->with('success', 'Empleado eliminado correctamente.');
     }
 }

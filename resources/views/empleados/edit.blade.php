@@ -30,7 +30,7 @@
                 <br>
             @endforeach
         </div>
-        
+
 
         <form action="{{ route('empleados.update', ['oficina' => $empleado->oficina_id, 'empleado' => $empleado]) }}"
             method="POST">
@@ -63,6 +63,17 @@
             <input type="hidden" name="oficina_id" value="{{ $empleado->oficina_id }}">
 
             <button type="submit">Guardar</button>
+        </form>
+
+        <form
+            action="{{ route('empleados.destroy', ['oficina' => $empleado->oficina_id, 'empleado' => $empleado->id]) }}"
+            method="POST" style="display:inline;">
+            @csrf
+            @method('DELETE')
+            <button type="submit" onclick="return confirm('¿Estás seguro de que quieres eliminar este empleado?');"
+                style="background-color: red; color: white; border: none; padding: 8px 12px; cursor: pointer;">
+                Eliminar Empleado
+            </button>
         </form>
     </main>
 
