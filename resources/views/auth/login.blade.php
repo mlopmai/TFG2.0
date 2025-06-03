@@ -34,17 +34,17 @@
           <div class="divider d-flex align-items-center my-4">
             <p class="text-center fw-bold mx-3 mb-0">Inicio de Sesión</p>
           </div>
-          <!--Formulario-->
+          
           <form action="{{ route('login') }}" method="POST">
             @csrf
-            <!-- Email input -->
+            
             <div data-mdb-input-init class="form-outline mb-4">
               <label class="form-label" for="email">Email</label>
               <input type="email" id="email" name="email" class="form-control form-control-lg"
                 placeholder="Inserte su correo electronico" />
             </div>
 
-            <!-- Password input -->
+            
             <div data-mdb-input-init class="form-outline mb-3">
               <label class="form-label" for="password">Contraseña</label>
               <input type="password" id="password" name="password" class="form-control form-control-lg"
@@ -65,28 +65,19 @@
     </div>
     <div
       class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-      <!-- Copyright -->
+      
       <div class="text-white mb-3 mb-md-0">
         Copyright © 2025. Manuel Lopez Mairate.
       </div>
-      <!-- Copyright -->
+      
 
-      <!-- TERMINAR ICONOS -->
+      
       <div>
         <a href="#!" class="text-white me-4">
-          imagen
-          <img src="{{ asset('') }}" alt="">
+          <img src="{{ asset('assets/icons8-instagram-50.png') }}" alt="">
         </a>
         <a href="#!" class="text-white me-4">
-          imagen
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#!" class="text-white me-4">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="#!" class="text-white">
-          <i class="fab fa-linkedin-in"></i>
-          imagen
+          <img src="{{ asset('assets/icons8-facebook-50.png') }}" alt="">
         </a>
       </div>
     </div>

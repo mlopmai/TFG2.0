@@ -12,21 +12,21 @@
     <link rel="stylesheet" href="{{asset("assets/styleLogin.css")}}">
 
     @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 </head>
 
 <body>
     <section class="vh-100">
         <div class="container-fluid h-custom">
             <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-md-9 col-lg-6 col-xl-5">
+                <div class="col-md-9 col-lg-6 col-xl-5 d-none d-lg-block">
                     <img src="{{asset('assets/Icono1.png')}}" class="img-fluid" alt="Sample image">
                 </div>
 
@@ -34,25 +34,25 @@
                     <div class="divider d-flex align-items-center my-4">
                         <p class="text-center fw-bold mx-3 mb-0">Registro</p>
                     </div>
-                    <!--Formulario-->
+
                     <form action="{{ route('register') }}" method="POST">
                         @csrf
 
-                        <!-- Nombre Input -->
+
                         <div data-mdb-input-init class="form-outline mb-4">
                             <label class="form-label" for="name">Nombre</label>
                             <input type="text" id="name" name="name" class="form-control form-control-lg"
                                 placeholder="Inserte su nombre" />
                         </div>
 
-                        <!-- Email input -->
+
                         <div data-mdb-input-init class="form-outline mb-4">
                             <label class="form-label" for="email">Email</label>
                             <input type="email" id="email" name="email" class="form-control form-control-lg"
                                 placeholder="Inserte su correo electronico" />
                         </div>
 
-                        <!-- Password input -->
+
                         <div data-mdb-input-init class="form-outline mb-3">
                             <label class="form-label" for="password">Contraseña</label>
                             <input type="password" id="password" name="password" class="form-control form-control-lg"
@@ -62,8 +62,8 @@
 
                         <div data-mdb-input-init class="form-outline mb-3">
                             <label class="form-label" for="password_confirmation">Confirmar contraseña</label>
-                            <input type="password" id="password_confirmation" name="password_confirmation" class="form-control form-control-lg"
-                                placeholder="Inserte su contraseña" />
+                            <input type="password" id="password_confirmation" name="password_confirmation"
+                                class="form-control form-control-lg" placeholder="Inserte su contraseña" />
                         </div>
 
                         <div class="text-center text-lg-start mt-4 pt-2">
@@ -80,27 +80,18 @@
         </div>
         <div
             class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-            
+
             <div class="text-white mb-3 mb-md-0">
                 Copyright © 2025. Manuel Lopez Mairate.
             </div>
 
-            <!-- TERMINAR ICONOS -->
+
             <div>
                 <a href="#!" class="text-white me-4">
-                    imagen
-                    <img src="{{ asset('') }}" alt="">
+                    <img src="{{ asset('assets/icons8-instagram-50.png') }}" alt="">
                 </a>
                 <a href="#!" class="text-white me-4">
-                    imagen
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#!" class="text-white me-4">
-                    <i class="fab fa-google"></i>
-                </a>
-                <a href="#!" class="text-white">
-                    <i class="fab fa-linkedin-in"></i>
-                    imagen
+                    <img src="{{ asset('assets/icons8-facebook-50.png') }}" alt="">
                 </a>
             </div>
         </div>
